@@ -16,7 +16,7 @@ The fastest way:
 
 ## Creating your own maps
 For creating your own maps, I recommend to use the official [SDK](https://czechguessr.github.io/czechguessr-sdk). You can also edit the JSON files yourself.
-* create a map in the SDK or crate the JSON file on your own
+* create a map in the SDK or create the JSON file on your own
 * create a folder on your computer
 * create a file and copy the JSON from the SDK or your text editor (should have the `.json` ext)
 * create a `CzechGuessr.json` file in the folder
