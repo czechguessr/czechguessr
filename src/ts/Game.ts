@@ -21,7 +21,7 @@ namespace CzechGuessr.Game {
 
     export async function load() {
         $("#results").hide();
-        CGMAP = await CGMap.Map.fromUrl(localStorage.getItem(GLOBAL.MAP_KEY) as string);
+        CGMAP = CGMap.Map.fromJSON(JSON.parse(sessionStorage.getItem(GLOBAL.MAP_KEY) as string), sessionStorage.getItem(GLOBAL.MAP_PATH_KEY) as string);
         MAP = $("#mapContainer");
         MAP.hide();
         PANO = new SMap.Pano.Scene($("#pano")[0]);
@@ -79,7 +79,7 @@ namespace CzechGuessr.Game {
         update();
     }
     export namespace Events {
-        const TIMEOUT = 100;
+        const TIMEOUT = 500;
         enum BtnStates {
             closed,
             map,
