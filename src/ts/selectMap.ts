@@ -59,8 +59,6 @@ namespace CzechGuessr.SelectMap {
             let config = await CGMap.Config.fromDir(root);
 
             if (config.maps.length === 0) {
-                console.log("no maps");
-
                 wrongPath(root);
                 return;
             }
