@@ -82,6 +82,6 @@ namespace CzechGuessr.SelectMap {
         if (map == undefined) return;
 
         localStorage.setItem(GLOBAL.MAP_KEY, mapPath);
-        window.location.href = "/game";
+        window.location.href = "../game";
     }
 }
