@@ -68,7 +68,7 @@ namespace CzechGuessr.CGMap {
     }
 
     export namespace Location {
-        export let toSeznamLocation = (CGloc: Location) => {
+        export function toSeznamLocation(CGloc: Location) {
             return SMap.Coords.fromWGS84(CGloc.lon, CGloc.lat);
         }
     }
