@@ -40,10 +40,16 @@
             <span class="input-group-text text-danger" id="folder-state"><i class="bi bi-x-circle-fill"></i>&nbsp;Not
                 found</span>
         </div>
-        <select title="Map" class="form-select" id="map" disabled>
-            <option value="" disabled selected>Select map...</option>
-        </select>
-        <button class="btn btn-light" onclick="CzechGuessr.SelectMap.ok()" id="play-form-btn" disabled>Play</button>
+        <div class="input-group">
+            <select title="Map" class="form-select" id="map" disabled>
+                <option value="" disabled selected>Select map...</option>
+            </select>
+            <button class="btn btn-primary" onclick="CzechGuessr.SelectMap.ok()" id="play-form-btn" disabled>OK</button>
+        </div>
+        <span>or</span>
+        <label for="map-file" class="btn btn-light">Select map file</label>
+        <input type="file" id="map-file" style="display: none;" accept="application/json"
+            onchange="CzechGuessr.SelectMap.fileSelected();">
     </div>
 
     <span id="ver"></span>

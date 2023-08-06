@@ -27,7 +27,7 @@
     <title>CzechGuessr - Game</title>
 </head>
 
-<body>
+<body onload="CzechGuessr.Game.load();">
     <div id="results">
         <div id="resMap"></div>
     </div>
@@ -45,9 +45,6 @@
         </div>
         <div id="mapContainer"></div>
     </div>
-    <script type="module">
-        await CzechGuessr.Game.load();
-    </script>
 </body>
 
 </html>
