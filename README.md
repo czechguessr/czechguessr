@@ -22,41 +22,13 @@ The fastest way:
 For creating your own maps, I recommend to use the official [SDK](https://czechguessr.github.io/czechguessr*sdk). You can also edit the JSON files yourself.
 
 * create a map in the SDK or create the JSON file on your own
-* create a folder on your computer
-* create a file and copy the JSON from the SDK or your text editor (should have the `.json` ext)
-* create a `CzechGuessr.json` file in the folder
-* copy this code in it:
-
-```jsonc
-{
-  "version": "1.0",
-  "maps": [
-      // filename of the json file
-  ]
-}
-```
-
-* start a basic HTTP server in the folder
-* on `czechguessr.github.io/play` enter the path to the `CzechGuessr.json` file without the filename (not trough `file:///` but your server) and play
-  * if it says `Not found`, you have a issue with `CORS`, change some settings in your HTTP server and it should work
+* create a file on your computer and copy the JSON from the SDK or your text editor (should have the `.json` ext)
+* click on the "Select map file" and select your map file, the game starts after selecting
 
 ## `npm` requirements for building on your own
 
 ```plain
 @types/leaflet
 @types/jquery
-```
-
-and `https://github.com/chriskorinek/mapy*api*ts*types`, but you need to change one method
-
-* change:
-
-```typescript
-getBest(coords: SMap.Coords, radius?: number, attribute?: object): void;
-```
-
-* in `class SMap.Pano` to:
-
-```typescript
-static async getBest(coords: SMap.Coords, radius?: number, attribute?: object): Promise;
+https://github.com/chriskorinek/mapy-api-ts-types
 ```
