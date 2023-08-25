@@ -9,7 +9,7 @@ The fastest way:
 * open `czechguessr.github.io`
 * click `Play in your browser`
 * in the first field enter:
-* if you want the default map: `/official*maps`
+* if you want the default map: `/official-maps`
 * else follow chapter `Creating your own maps`
 * select the map in the second field
 * click `Play`
